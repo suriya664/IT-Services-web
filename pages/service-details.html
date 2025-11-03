@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detailed information about our IT services and cybersecurity solutions.">
+  <title>Service Details - CloudGuard Technologies</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/dark.css">
+  <link rel="stylesheet" href="../assets/css/vendor.css">
+</head>
+<body>
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+
+  <!-- Main Content -->
+  <main id="main">
+    <!-- Page Header -->
+    <section class="hero py-5">
+      <div class="container-lg">
+        <nav aria-label="breadcrumb" data-aos="fade-down">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+            <li class="breadcrumb-item"><a href="services.html" class="text-white">Services</a></li>
+            <li class="breadcrumb-item active text-white" aria-current="page" id="serviceName">Service Details</li>
+          </ol>
+        </nav>
+        
+        <div class="text-center text-white" data-aos="fade-up">
+          <h1 class="text-white" id="serviceTitle">Service Details</h1>
+          <p class="lead" id="serviceSubtitle">Comprehensive solutions for your business</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="py-5">
+      <div class="container-lg">
+        <div class="row g-5">
+          <!-- Main Content -->
+          <div class="col-12 col-lg-8">
+            <div id="serviceContent">
+              <!-- Content will be loaded dynamically based on URL parameter -->
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="mt-5" data-aos="fade-up">
+              <h3>Key Benefits</h3>
+              <div class="row g-3 mt-3" id="benefitsContainer">
+                <!-- Benefits will be loaded dynamically -->
+              </div>
+            </div>
+
+            <!-- Pricing Information -->
+            <div class="mt-5 p-4 bg-light-gray rounded" data-aos="fade-up">
+              <h3 class="mb-4">Pricing</h3>
+              <p class="text-muted">Our pricing is transparent and flexible, tailored to your organization's size and requirements.</p>
+              <div class="d-flex gap-3 flex-wrap mt-4">
+                <a href="pricing.html" class="btn btn-primary">View Pricing Plans</a>
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#quoteModal">Get Custom Quote</button>
+              </div>
+            </div>
+
+            <!-- Related Case Studies -->
+            <div class="mt-5" data-aos="fade-up">
+              <h3>Success Stories</h3>
+              <p class="text-muted">See how we've helped organizations like yours achieve their security and IT goals.</p>
+              <a href="case-studies.html" class="btn btn-outline-primary mt-3">View Case Studies →</a>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-12 col-lg-4">
+            <!-- Quick Contact -->
+            <div class="card mb-4" data-aos="fade-left">
+              <div class="card-body">
+                <h5 class="card-title">Need Help?</h5>
+                <p class="card-text">Our experts are ready to discuss your requirements.</p>
+                <button class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                  <i class="fas fa-envelope me-2"></i>Request Quote
+                </button>
+                <a href="contact.html" class="btn btn-outline-primary w-100">
+                  <i class="fas fa-phone me-2"></i>Contact Us
+                </a>
+                <hr class="my-3">
+                <p class="mb-2"><i class="fas fa-phone text-primary me-2"></i><a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p class="mb-0"><i class="fas fa-envelope text-primary me-2"></i><a href="mailto:contact@cloudguard.in">contact@cloudguard.in</a></p>
+              </div>
+            </div>
+
+            <!-- All Services -->
+            <div class="card mb-4" data-aos="fade-left" data-aos-delay="100">
+              <div class="card-body">
+                <h5 class="card-title">All Services</h5>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><a href="service-details.html?service=cybersecurity"><i class="fas fa-shield-alt text-primary me-2"></i>Managed Security</a></li>
+                  <li class="mb-2"><a href="service-details.html?service=cloud"><i class="fas fa-cloud text-primary me-2"></i>Cloud Services</a></li>
+                  <li class="mb-2"><a href="service-details.html?service=devops"><i class="fas fa-code-branch text-primary me-2"></i>DevOps & Automation</a></li>
+                  <li class="mb-2"><a href="service-details.html?service=vapt"><i class="fas fa-bug text-primary me-2"></i>VAPT Services</a></li>
+                  <li class="mb-2"><a href="service-details.html?service=compliance"><i class="fas fa-clipboard-check text-primary me-2"></i>Compliance & Audit</a></li>
+                  <li class="mb-2"><a href="service-details.html?service=support"><i class="fas fa-headset text-primary me-2"></i>24/7 IT Support</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Download Brochure -->
+            <div class="card" data-aos="fade-left" data-aos-delay="200">
+              <div class="card-body text-center">
+                <i class="fas fa-file-pdf text-danger mb-3" style="font-size: 3rem;"></i>
+                <h5 class="card-title">Service Brochure</h5>
+                <p class="card-text small">Download our comprehensive service brochure</p>
+                <a href="#" class="btn btn-outline-primary btn-sm">
+                  <i class="fas fa-download me-2"></i>Download PDF
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary-gradient text-white">
+      <div class="container-lg">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-8 text-center text-lg-start mb-4 mb-lg-0" data-aos="fade-right">
+            <h2 class="text-white mb-3">Ready to Enhance Your Security?</h2>
+            <p class="mb-0 opacity-90">Let's discuss how we can help protect and optimize your IT infrastructure.</p>
+          </div>
+          <div class="col-12 col-lg-4 text-center text-lg-end" data-aos="fade-left">
+            <button class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#demoModal">
+              Schedule a Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Modals -->
+  <div id="modals-placeholder"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Custom JS -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/plugins.js"></script>
+  <script src="../assets/js/ajax.js"></script>
+
+  <!-- Load Partials -->
+  <script src="../assets/js/partial-loader.js"></script>
+
+  <!-- Dynamic Service Content -->
+  <script>
+    // Service data
+    const services = {
+      cybersecurity: {
+        title: 'Managed Security Services (MSS)',
+        subtitle: '24/7 SOC monitoring and threat protection',
+        content: `
+          <div data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=400&fit=crop" 
+                 alt="Cybersecurity" class="img-fluid rounded mb-4">
+            <h2>Comprehensive Managed Security Services</h2>
+            <p class="lead">Protect your organization with 24/7 Security Operations Center (SOC) monitoring, advanced threat detection, and rapid incident response.</p>
+            
+            <h3 class="mt-4">What We Offer</h3>
+            <p>Our Managed Security Services provide continuous monitoring and protection of your IT infrastructure, applications, and data. We combine advanced security tools with expert analysts to detect, respond to, and remediate security threats before they impact your business.</p>
+            
+            <h4 class="mt-4">Core Features</h4>
+            <ul>
+              <li><strong>24/7 SOC Monitoring:</strong> Round-the-clock surveillance of your security infrastructure</li>
+              <li><strong>Threat Intelligence:</strong> Real-time threat feeds and proactive threat hunting</li>
+              <li><strong>Incident Response:</strong> Rapid containment and remediation of security incidents</li>
+              <li><strong>SIEM Management:</strong> Centralized log management and correlation</li>
+              <li><strong>Vulnerability Management:</strong> Regular scanning and remediation tracking</li>
+              <li><strong>Compliance Reporting:</strong> Detailed reports for regulatory requirements</li>
+            </ul>
+            
+            <h4 class="mt-4">Our Approach</h4>
+            <p>We implement a defense-in-depth strategy that includes:</p>
+            <ol>
+              <li>Initial security posture assessment</li>
+              <li>Custom security architecture design</li>
+              <li>Deployment of monitoring and protection tools</li>
+              <li>Continuous monitoring and threat detection</li>
+              <li>Incident response and remediation</li>
+              <li>Regular security posture reviews and improvements</li>
+            </ol>
+          </div>
+        `,
+        benefits: [
+          { icon: 'shield-alt', title: 'Enhanced Protection', description: 'Multi-layered security defense' },
+          { icon: 'clock', title: '24/7 Monitoring', description: 'Continuous threat surveillance' },
+          { icon: 'chart-line', title: 'Reduced Risk', description: '95% threat detection rate' },
+          { icon: 'rupee-sign', title: 'Cost Savings', description: 'Lower than in-house SOC' }
+        ]
+      },
+      cloud: {
+        title: 'Cloud Migration & Managed Cloud',
+        subtitle: 'Seamless cloud transformation and management',
+        content: `
+          <div data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop" 
+                 alt="Cloud Services" class="img-fluid rounded mb-4">
+            <h2>Cloud Migration & Management Services</h2>
+            <p class="lead">Transform your business with scalable, secure cloud infrastructure on AWS, Azure, or Google Cloud Platform.</p>
+            
+            <h3 class="mt-4">Cloud Services We Provide</h3>
+            <p>Whether you're planning your first move to the cloud or optimizing existing cloud infrastructure, our team of certified cloud architects and engineers can help you achieve your goals with minimal disruption and maximum value.</p>
+            
+            <h4 class="mt-4">Migration Services</h4>
+            <ul>
+              <li><strong>Cloud Readiness Assessment:</strong> Evaluate applications and infrastructure for cloud suitability</li>
+              <li><strong>Migration Strategy:</strong> Design optimal migration approach (lift-and-shift, re-platform, or re-architect)</li>
+              <li><strong>Application Migration:</strong> Move workloads with zero or minimal downtime</li>
+              <li><strong>Data Migration:</strong> Secure transfer of databases and storage</li>
+              <li><strong>Testing & Validation:</strong> Comprehensive testing before cutover</li>
+            </ul>
+            
+            <h4 class="mt-4">Managed Cloud Services</h4>
+            <ul>
+              <li>24/7 monitoring and support</li>
+              <li>Performance optimization</li>
+              <li>Cost optimization and FinOps</li>
+              <li>Security and compliance management</li>
+              <li>Backup and disaster recovery</li>
+              <li>Auto-scaling and load balancing</li>
+            </ul>
+          </div>
+        `,
+        benefits: [
+          { icon: 'cloud', title: 'Scalability', description: 'Scale resources on demand' },
+          { icon: 'rupee-sign', title: '40% Cost Reduction', description: 'Average infrastructure savings' },
+          { icon: 'tachometer-alt', title: 'High Performance', description: '99.99% uptime SLA' },
+          { icon: 'lock', title: 'Enhanced Security', description: 'Enterprise-grade protection' }
+        ]
+      },
+      devops: {
+        title: 'DevOps & CI/CD Automation',
+        subtitle: 'Streamline your software delivery pipeline',
+        content: `
+          <div data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=800&h=400&fit=crop" 
+                 alt="DevOps" class="img-fluid rounded mb-4">
+            <h2>DevOps & Automation Solutions</h2>
+            <p class="lead">Accelerate software delivery with automated CI/CD pipelines, infrastructure as code, and modern DevOps practices.</p>
+            
+            <h3 class="mt-4">DevOps Transformation</h3>
+            <p>We help organizations adopt DevOps culture, practices, and tools to improve collaboration between development and operations teams, automate processes, and deliver software faster and more reliably.</p>
+            
+            <h4 class="mt-4">Our Services Include</h4>
+            <ul>
+              <li><strong>CI/CD Pipeline Setup:</strong> Automated build, test, and deployment pipelines</li>
+              <li><strong>Infrastructure as Code (IaC):</strong> Terraform, CloudFormation, Ansible automation</li>
+              <li><strong>Container Orchestration:</strong> Docker, Kubernetes, ECS/EKS setup and management</li>
+              <li><strong>Monitoring & Logging:</strong> Prometheus, Grafana, ELK stack implementation</li>
+              <li><strong>GitOps Workflows:</strong> Git-based deployment automation</li>
+              <li><strong>Automated Testing:</strong> Unit, integration, and security testing integration</li>
+            </ul>
+          </div>
+        `,
+        benefits: [
+          { icon: 'rocket', title: 'Faster Delivery', description: '10x deployment frequency' },
+          { icon: 'code', title: 'Automation', description: '80% reduction in manual tasks' },
+          { icon: 'check-circle', title: 'Quality', description: 'Fewer production bugs' },
+          { icon: 'users', title: 'Collaboration', description: 'Better team productivity' }
+        ]
+      }
+    };
+
+    // Get service from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceType = urlParams.get('service') || 'cybersecurity';
+    const service = services[serviceType] || services.cybersecurity;
+
+    // Update page content
+    document.getElementById('serviceTitle').textContent = service.title;
+    document.getElementById('serviceSubtitle').textContent = service.subtitle;
+    document.getElementById('serviceName').textContent = service.title;
+    document.getElementById('serviceContent').innerHTML = service.content;
+
+    // Load benefits
+    const benefitsContainer = document.getElementById('benefitsContainer');
+    service.benefits.forEach(benefit => {
+      benefitsContainer.innerHTML += `
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-start p-3 bg-white rounded shadow-sm">
+            <div class="flex-shrink-0 me-3">
+              <i class="fas fa-${benefit.icon} text-primary" style="font-size: 2rem;"></i>
+            </div>
+            <div>
+              <h6 class="mb-1">${benefit.title}</h6>
+              <small class="text-muted">${benefit.description}</small>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
+

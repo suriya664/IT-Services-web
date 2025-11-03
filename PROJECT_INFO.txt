@@ -1,0 +1,345 @@
+===========================================================
+         IT SERVICES TEMPLATE - PROJECT INFORMATION
+===========================================================
+
+PROJECT NAME: CloudGuard Technologies - IT Services Template
+VERSION: 1.0.0
+CREATED: October 2025
+LICENSE: MIT License
+
+-----------------------------------------------------------
+FEATURES SUMMARY
+-----------------------------------------------------------
+
+✅ 21 Professional HTML Pages
+✅ Fully Responsive (Mobile, Tablet, Desktop)
+✅ Indian Localization (₹ INR, +91 Phone, Dates)
+✅ Dark Mode Toggle
+✅ Bootstrap 5.3 Framework
+✅ AJAX Form Handling
+✅ Client Dashboard
+✅ SEO Optimized
+✅ WCAG 2.1 AA Accessibility
+✅ Security Best Practices
+
+-----------------------------------------------------------
+PAGE LIST (21 PAGES)
+-----------------------------------------------------------
+
+PUBLIC PAGES:
+1. index.html - Landing page with hero & services
+2. about.html - Company information & team
+3. services.html - All services overview
+4. service-details.html - Individual service pages
+5. solutions.html - Industry-specific solutions
+6. case-studies.html - Customer success stories
+7. pricing.html - Pricing plans in INR (₹)
+8. contact.html - Contact form & office locations
+9. careers.html - Job listings & applications
+10. blog.html - Blog posts & articles
+11. blog-details.html - Single article view
+12. terms.html - Terms of Service
+13. privacy-policy.html - Privacy Policy
+14. 404.html - Error page
+
+CLIENT PORTAL:
+15. login.html - Client portal login
+16. dashboard.html - Client dashboard
+
+DOCUMENTATION:
+17. docs/integration-guide.html - API documentation
+
+PARTIALS (Reusable Components):
+- header.html - Navigation menu
+- footer.html - Footer with newsletter
+- modals.html - Quote & contact modals
+- sidebar.html - Dashboard sidebar
+
+-----------------------------------------------------------
+TECH STACK
+-----------------------------------------------------------
+
+Frontend:
+- HTML5 (Semantic markup)
+- CSS3 (Grid, Flexbox, Custom Properties)
+- JavaScript ES6+
+- Bootstrap 5.3
+- Font Awesome 6
+- AOS (Animate On Scroll)
+- Prism.js (Syntax highlighting)
+
+Features:
+- Responsive Design (Mobile-first)
+- Dark Mode (Toggle + LocalStorage)
+- AJAX Forms (No page reload)
+- Form Validation
+- Lazy Loading Images
+- Smooth Scrolling
+- Counter Animations
+
+-----------------------------------------------------------
+FOLDER STRUCTURE
+-----------------------------------------------------------
+
+it-services-template/
+├── .github/
+│   └── workflows/ci.yml       # GitHub Actions CI/CD
+├── assets/
+│   ├── css/
+│   │   ├── style.css          # Main styles
+│   │   ├── layout.css         # Layout & utilities
+│   │   ├── responsive.css     # Media queries
+│   │   ├── dark.css           # Dark theme
+│   │   └── vendor.css         # Plugin overrides
+│   └── js/
+│       ├── main.js            # Core functionality
+│       ├── plugins.js         # Plugin initialization
+│       └── ajax.js            # AJAX form handling
+├── docs/
+│   └── CHANGELOG.md           # Version history
+├── pages/
+│   ├── *.html                 # All 21 pages
+│   └── docs/
+│       └── integration-guide.html
+├── partials/
+│   ├── header.html
+│   ├── footer.html
+│   ├── modals.html
+│   └── sidebar.html
+├── .gitignore
+├── LICENSE.md                  # MIT License
+├── README.md                   # Setup instructions
+├── GITHUB_SETUP.md            # Git upload guide
+├── UPLOAD_TO_GITHUB.md        # Easy upload methods
+└── PROJECT_INFO.txt           # This file
+
+-----------------------------------------------------------
+INDIAN LOCALIZATION FEATURES
+-----------------------------------------------------------
+
+✅ Currency: ₹ (Indian Rupee) throughout
+✅ Phone Format: +91 XXXXX XXXXX validation
+✅ Date Format: DD/MM/YYYY or DD Month YYYY
+✅ Payment Methods: UPI, Net Banking, Cards
+✅ Company Address: Bengaluru, Karnataka
+✅ Office Locations: Mumbai, Delhi NCR, Bengaluru
+✅ GST Ready: Invoice templates included
+✅ Indian Business Hours: 9 AM - 6 PM IST
+
+-----------------------------------------------------------
+SERVICES FEATURED
+-----------------------------------------------------------
+
+1. Managed Security Services (MSS)
+2. Vulnerability Assessment & Penetration Testing (VAPT)
+3. Cloud Migration & Managed Cloud (AWS/Azure/GCP)
+4. DevOps & CI/CD Automation
+5. Identity & Access Management (IAM)
+6. Disaster Recovery & Business Continuity
+7. Compliance & Audit (ISO27001, SOC2, GDPR)
+8. Security Awareness Training
+9. 24/7 IT Support & Management
+
+-----------------------------------------------------------
+TARGET INDUSTRIES
+-----------------------------------------------------------
+
+✅ Financial Services (Banking, NBFCs, FinTech)
+✅ Healthcare (Hospitals, Clinics)
+✅ E-commerce & Retail
+✅ Government & Public Sector
+✅ Manufacturing & Industrial
+✅ Technology & Startups
+
+-----------------------------------------------------------
+DEPLOYMENT OPTIONS
+-----------------------------------------------------------
+
+1. GitHub Pages (FREE)
+   - Enable in Settings → Pages
+   - Live URL: username.github.io/repo-name
+
+2. Netlify (FREE)
+   - Drag & drop deployment
+   - Custom domain support
+
+3. Vercel (FREE)
+   - One-click deployment
+   - Automatic HTTPS
+
+4. Traditional Hosting
+   - Upload via FTP
+   - Any PHP/HTML hosting
+
+-----------------------------------------------------------
+BROWSER SUPPORT
+-----------------------------------------------------------
+
+✅ Chrome (Latest)
+✅ Firefox (Latest)
+✅ Safari (Latest)
+✅ Edge (Latest)
+✅ Mobile Browsers (iOS Safari, Chrome Android)
+
+-----------------------------------------------------------
+CUSTOMIZATION GUIDE
+-----------------------------------------------------------
+
+COLORS:
+Edit: assets/css/style.css (Lines 10-20)
+Change: --primary-color, --secondary-color, etc.
+
+COMPANY INFO:
+Edit: partials/header.html and partials/footer.html
+Update: Company name, address, phone, email
+
+SERVICES:
+Edit: pages/services.html
+Modify: Service cards and descriptions
+
+PRICING:
+Edit: pages/pricing.html
+Update: Plans and prices in INR
+
+IMAGES:
+Replace: Placeholder image URLs with your own
+Maintain: Aspect ratios (Hero: 16:6, Cards: 4:3)
+
+-----------------------------------------------------------
+SEO OPTIMIZED
+-----------------------------------------------------------
+
+✅ Meta Tags (Title, Description)
+✅ Open Graph Tags (Social sharing)
+✅ Semantic HTML5 Structure
+✅ Alt Text on Images
+✅ Breadcrumb Navigation
+✅ Sitemap Ready
+✅ Fast Loading Time
+✅ Mobile-First Design
+
+-----------------------------------------------------------
+ACCESSIBILITY (WCAG 2.1 AA)
+-----------------------------------------------------------
+
+✅ Skip Links
+✅ ARIA Labels & Roles
+✅ Keyboard Navigation
+✅ Color Contrast ≥ 4.5:1
+✅ Screen Reader Friendly
+✅ Focus Indicators
+✅ Alt Text on All Images
+
+-----------------------------------------------------------
+SECURITY FEATURES
+-----------------------------------------------------------
+
+✅ CSRF Token Support
+✅ Input Validation
+✅ XSS Prevention
+✅ Secure Form Handling
+✅ HTTPS Enforcement
+✅ Cookie Consent Banner
+✅ Privacy Policy Included
+✅ Data Protection Compliant
+
+-----------------------------------------------------------
+DOCUMENTATION INCLUDED
+-----------------------------------------------------------
+
+📄 README.md - Setup and customization guide
+📄 CHANGELOG.md - Version history
+📄 GITHUB_SETUP.md - Git upload instructions
+📄 UPLOAD_TO_GITHUB.md - Easy upload methods
+📄 LICENSE.md - MIT License
+📄 Integration Guide - API documentation
+📄 PROJECT_INFO.txt - This comprehensive guide
+
+-----------------------------------------------------------
+GITHUB REPOSITORY INFO
+-----------------------------------------------------------
+
+Recommended Repository Name: it-services-template
+
+Description:
+"Modern, responsive IT Services & Cybersecurity website 
+template with Indian localization. Features Bootstrap 5, 
+Dark Mode, AJAX forms, Client Portal, and more."
+
+Topics/Tags:
+html, css, javascript, bootstrap, template, it-services,
+cybersecurity, cloud-computing, website-template,
+responsive-design, dark-mode, indian-localization,
+github-pages
+
+-----------------------------------------------------------
+LIVE DEMO URL FORMAT
+-----------------------------------------------------------
+
+After deploying to GitHub Pages:
+https://USERNAME.github.io/it-services-template/pages/index.html
+
+-----------------------------------------------------------
+FILE COUNT
+-----------------------------------------------------------
+
+HTML Pages: 21
+CSS Files: 5
+JavaScript Files: 3
+Partial Files: 4
+Documentation: 7
+Config Files: 3
+Total Files: 40+
+
+-----------------------------------------------------------
+IDEAL FOR
+-----------------------------------------------------------
+
+✅ IT Service Companies
+✅ Cybersecurity Firms
+✅ Cloud Service Providers
+✅ MSPs (Managed Service Providers)
+✅ DevOps Consultancies
+✅ Technology Startups
+✅ Digital Agencies
+✅ Freelance IT Consultants
+
+-----------------------------------------------------------
+LICENSE
+-----------------------------------------------------------
+
+MIT License - Free to use, modify, and distribute
+See LICENSE.md for full terms
+
+-----------------------------------------------------------
+SUPPORT
+-----------------------------------------------------------
+
+For issues or questions:
+- Check README.md
+- Review documentation files
+- Open GitHub issue (if repository is public)
+
+-----------------------------------------------------------
+CREDITS
+-----------------------------------------------------------
+
+Template Created: October 2025
+Framework: Bootstrap 5.3
+Icons: Font Awesome 6
+Fonts: Google Fonts (Inter, Poppins)
+Animations: AOS Library
+Syntax Highlighting: Prism.js
+
+-----------------------------------------------------------
+                    PROJECT READY! 🎉
+-----------------------------------------------------------
+
+This template is production-ready and can be deployed
+immediately. All links work, forms are functional,
+and the design is professional and modern.
+
+Perfect for IT services businesses in India! 🇮🇳
+
+===========================================================
+

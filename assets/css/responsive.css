@@ -1,0 +1,446 @@
+/**
+ * Responsive Design & Media Queries
+ * Mobile-first approach with Bootstrap-compatible breakpoints
+ */
+
+/* ========================================
+   Breakpoints:
+   - xs: 0px (default, mobile)
+   - sm: 576px (landscape phones)
+   - md: 768px (tablets)
+   - lg: 992px (desktops)
+   - xl: 1200px (large desktops)
+   - xxl: 1400px (extra large desktops)
+   ======================================== */
+
+/* ========================================
+   Small Devices (≥576px)
+   ======================================== */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .d-sm-none { display: none !important; }
+  .d-sm-block { display: block !important; }
+  .d-sm-flex { display: flex !important; }
+  .d-sm-inline-flex { display: inline-flex !important; }
+
+  .text-sm-left { text-align: left !important; }
+  .text-sm-center { text-align: center !important; }
+  .text-sm-right { text-align: right !important; }
+}
+
+/* ========================================
+   Medium Devices (≥768px)
+   ======================================== */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .hero {
+    padding: 8rem 0;
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1.25rem;
+  }
+
+  .d-md-none { display: none !important; }
+  .d-md-block { display: block !important; }
+  .d-md-flex { display: flex !important; }
+  .d-md-inline-flex { display: inline-flex !important; }
+
+  .text-md-left { text-align: left !important; }
+  .text-md-center { text-align: center !important; }
+  .text-md-right { text-align: right !important; }
+
+  .flex-md-row { flex-direction: row !important; }
+  .flex-md-column { flex-direction: column !important; }
+
+  .justify-content-md-start { justify-content: flex-start !important; }
+  .justify-content-md-end { justify-content: flex-end !important; }
+  .justify-content-md-center { justify-content: center !important; }
+  .justify-content-md-between { justify-content: space-between !important; }
+
+  .align-items-md-start { align-items: flex-start !important; }
+  .align-items-md-end { align-items: flex-end !important; }
+  .align-items-md-center { align-items: center !important; }
+}
+
+/* ========================================
+   Large Devices (≥992px)
+   ======================================== */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .hero {
+    padding: 10rem 0;
+  }
+
+  .d-lg-none { display: none !important; }
+  .d-lg-block { display: block !important; }
+  .d-lg-flex { display: flex !important; }
+  .d-lg-inline-flex { display: inline-flex !important; }
+
+  .text-lg-left { text-align: left !important; }
+  .text-lg-center { text-align: center !important; }
+  .text-lg-right { text-align: right !important; }
+
+  .flex-lg-row { flex-direction: row !important; }
+  .flex-lg-column { flex-direction: column !important; }
+}
+
+/* ========================================
+   Extra Large Devices (≥1200px)
+   ======================================== */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .d-xl-none { display: none !important; }
+  .d-xl-block { display: block !important; }
+  .d-xl-flex { display: flex !important; }
+  .d-xl-inline-flex { display: inline-flex !important; }
+
+  .text-xl-left { text-align: left !important; }
+  .text-xl-center { text-align: center !important; }
+  .text-xl-right { text-align: right !important; }
+}
+
+/* ========================================
+   Extra Extra Large Devices (≥1400px)
+   ======================================== */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .d-xxl-none { display: none !important; }
+  .d-xxl-block { display: block !important; }
+  .d-xxl-flex { display: flex !important; }
+  .d-xxl-inline-flex { display: inline-flex !important; }
+}
+
+/* ========================================
+   Mobile-Specific Adjustments (≤767px)
+   ======================================== */
+@media (max-width: 767px) {
+  /* Fix navbar scroll overlap */
+  body {
+    padding-top: 80px;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0.5rem 0;
+  }
+  
+  main {
+    margin-top: 0;
+  }
+
+  /* Mobile Brand Styling */
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  /* Mobile Navigation */
+  .navbar-nav {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--light-gray);
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem;
+    margin: 0.25rem 0;
+    border-radius: var(--border-radius-sm);
+    text-align: left;
+  }
+
+  .navbar-nav .nav-link i {
+    width: 20px;
+    text-align: center;
+  }
+
+  /* Mobile Dropdown */
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: var(--lighter-gray);
+    border: none;
+    box-shadow: none;
+    border-radius: var(--border-radius-sm);
+    margin-left: 1rem;
+  }
+
+  .navbar-nav .dropdown-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Mobile CTA Buttons */
+  .navbar-actions {
+    margin-left: 0;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--light-gray);
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .navbar-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Typography */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+
+  /* Hero Section */
+  .hero {
+    padding: 4rem 0;
+    margin-top: 0;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Sections */
+  section {
+    padding: 3rem 0;
+  }
+
+  /* Buttons */
+  .btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Cards */
+  .card {
+    margin-bottom: 1.5rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+  }
+
+  /* Pricing Cards */
+  .pricing-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+
+  /* Stats */
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+
+  /* Forms */
+  .form-control {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Footer */
+  footer {
+    padding: 2rem 0 1rem;
+  }
+
+  footer .col {
+    margin-bottom: 2rem;
+  }
+
+  /* Navigation */
+  .navbar-collapse {
+    padding: 1rem 0;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 0;
+  }
+
+  /* Spacing adjustments */
+  .mb-5 {
+    margin-bottom: 2rem !important;
+  }
+
+  .mt-5 {
+    margin-top: 2rem !important;
+  }
+
+  .py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Table responsiveness */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Blog cards */
+  .blog-card {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Testimonials */
+  .testimonial {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Feature items */
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ========================================
+   Tablet-Specific Adjustments (768px-991px)
+   ======================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero {
+    padding: 6rem 0;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+@media print {
+  /* Hide non-essential elements */
+  .navbar,
+  .footer,
+  .btn,
+  .modal,
+  .alert,
+  .breadcrumb,
+  .skip-link {
+    display: none !important;
+  }
+
+  /* Optimize for print */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+
+  /* Show URLs for links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* Avoid breaks inside elements */
+  .card,
+  .testimonial,
+  .pricing-card {
+    page-break-inside: avoid;
+  }
+}
+
+/* ========================================
+   Reduced Motion (Accessibility)
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   High Contrast Mode (Accessibility)
+   ======================================== */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #0052cc;
+    --secondary-color: #00a86b;
+  }
+
+  .btn {
+    border: 2px solid currentColor;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* ========================================
+   Landscape Orientation
+   ======================================== */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .navbar {
+    padding: 0.5rem 0;
+  }
+}
+

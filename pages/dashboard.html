@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Client dashboard - Manage your IT services, view security reports, and track support tickets.">
+  <title>Dashboard - CloudGuard Technologies</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/dark.css">
+</head>
+<body>
+  <div class="d-flex">
+    <!-- Sidebar -->
+    <div id="sidebar-placeholder"></div>
+
+    <!-- Main Content -->
+    <div class="flex-grow-1" style="margin-left: 250px;">
+      <!-- Top Navbar -->
+      <nav class="navbar navbar-light bg-white border-bottom sticky-top">
+        <div class="container-fluid px-4">
+          <h4 class="mb-0">Dashboard</h4>
+          <div class="d-flex align-items-center gap-3">
+            <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#supportModal">
+              <i class="fas fa-headset me-1"></i>Support
+            </button>
+            <div class="dropdown">
+              <button class="btn btn-sm btn-light dropdown-toggle" data-bs-toggle="dropdown">
+                <i class="fas fa-user-circle me-1"></i>John Doe
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#settings"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#" onclick="logout()"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Dashboard Content -->
+      <main class="p-4">
+        <!-- Stats Cards -->
+        <div class="row g-4 mb-4">
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <p class="text-muted mb-1">Active Services</p>
+                    <h3 class="mb-0">5</h3>
+                  </div>
+                  <div class="bg-primary bg-opacity-10 p-3 rounded">
+                    <i class="fas fa-server text-primary" style="font-size: 1.5rem;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <p class="text-muted mb-1">Open Tickets</p>
+                    <h3 class="mb-0">3</h3>
+                  </div>
+                  <div class="bg-warning bg-opacity-10 p-3 rounded">
+                    <i class="fas fa-ticket-alt text-warning" style="font-size: 1.5rem;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <p class="text-muted mb-1">Security Score</p>
+                    <h3 class="mb-0">95%</h3>
+                  </div>
+                  <div class="bg-success bg-opacity-10 p-3 rounded">
+                    <i class="fas fa-shield-alt text-success" style="font-size: 1.5rem;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <p class="text-muted mb-1">Uptime</p>
+                    <h3 class="mb-0">99.9%</h3>
+                  </div>
+                  <div class="bg-info bg-opacity-10 p-3 rounded">
+                    <i class="fas fa-chart-line text-info" style="font-size: 1.5rem;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Services -->
+        <div class="card mb-4" id="services">
+          <div class="card-header bg-white">
+            <h5 class="mb-0">Active Services</h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Plan</th>
+                    <th>Status</th>
+                    <th>Next Billing</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fas fa-shield-alt text-primary me-2"></i>Managed Security Services</td>
+                    <td>Professional</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td>14 Nov 2025</td>
+                    <td><a href="#" class="btn btn-sm btn-outline-primary">Manage</a></td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-cloud text-primary me-2"></i>Cloud Management</td>
+                    <td>Enterprise</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td>20 Nov 2025</td>
+                    <td><a href="#" class="btn btn-sm btn-outline-primary">Manage</a></td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-code-branch text-primary me-2"></i>DevOps Support</td>
+                    <td>Professional</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td>5 Dec 2025</td>
+                    <td><a href="#" class="btn btn-sm btn-outline-primary">Manage</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Support Tickets -->
+        <div class="card mb-4" id="tickets">
+          <div class="card-header bg-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Recent Support Tickets</h5>
+            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#supportModal">
+              <i class="fas fa-plus me-1"></i>New Ticket
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="list-group list-group-flush">
+              <div class="list-group-item d-flex justify-content-between align-items-start">
+                <div>
+                  <h6 class="mb-1">TKT-12345: Security Alert Investigation</h6>
+                  <p class="mb-1 small text-muted">Opened: 12 Oct 2025</p>
+                  <span class="badge bg-warning">In Progress</span>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline-primary">View</a>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-start">
+                <div>
+                  <h6 class="mb-1">TKT-12344: Cloud Cost Optimization</h6>
+                  <p class="mb-1 small text-muted">Opened: 10 Oct 2025</p>
+                  <span class="badge bg-info">Open</span>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline-primary">View</a>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-start">
+                <div>
+                  <h6 class="mb-1">TKT-12343: Backup Verification</h6>
+                  <p class="mb-1 small text-muted">Opened: 8 Oct 2025</p>
+                  <span class="badge bg-success">Resolved</span>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline-primary">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Invoices -->
+        <div class="card mb-4" id="invoices">
+          <div class="card-header bg-white">
+            <h5 class="mb-0">Recent Invoices</h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Invoice #</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>INV-2025-1012</td>
+                    <td>14 Oct 2025</td>
+                    <td>₹1,49,999</td>
+                    <td><span class="badge bg-success">Paid</span></td>
+                    <td><a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>INV-2025-0915</td>
+                    <td>14 Sep 2025</td>
+                    <td>₹1,49,999</td>
+                    <td><span class="badge bg-success">Paid</span></td>
+                    <td><a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>INV-2025-0814</td>
+                    <td>14 Aug 2025</td>
+                    <td>₹1,49,999</td>
+                    <td><span class="badge bg-success">Paid</span></td>
+                    <td><a href="#" class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security Reports -->
+        <div class="card" id="security">
+          <div class="card-header bg-white">
+            <h5 class="mb-0">Latest Security Report</h5>
+          </div>
+          <div class="card-body">
+            <div class="row g-4">
+              <div class="col-12 col-md-6">
+                <h6>Threat Summary (Last 30 Days)</h6>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Threats Blocked: 1,247</li>
+                  <li class="mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Alerts Generated: 23</li>
+                  <li class="mb-2"><i class="fas fa-shield-alt text-success me-2"></i>Incidents Resolved: 5</li>
+                  <li class="mb-2"><i class="fas fa-chart-line text-info me-2"></i>Security Score: 95%</li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-6">
+                <h6>Recommended Actions</h6>
+                <div class="alert alert-warning mb-2">
+                  <small><strong>2 Critical Updates Available</strong><br>Security patches need to be applied</small>
+                </div>
+                <div class="alert alert-info mb-0">
+                  <small><strong>Security Training Due</strong><br>3 employees need to complete training</small>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-file-pdf me-2"></i>Download Full Report</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Support Ticket Modal -->
+  <div class="modal fade" id="supportModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Create Support Ticket</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="supportForm">
+            <div class="mb-3">
+              <label class="form-label">Priority</label>
+              <select class="form-select" required>
+                <option value="">Select priority</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <option value="critical">Critical</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Subject</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Description</label>
+              <textarea class="form-control" rows="4" required></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Submit Ticket</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/ajax.js"></script>
+
+  <script>
+    // Load sidebar
+    fetch('../partials/sidebar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('sidebar-placeholder').innerHTML = data);
+
+    // Check if logged in with better UX
+    function checkAuth() {
+      if (!localStorage.getItem('isLoggedIn')) {
+        // Show a brief loading message before redirect
+        document.body.innerHTML = `
+          <div class="d-flex align-items-center justify-content-center min-vh-100">
+            <div class="text-center">
+              <div class="spinner-border text-primary mb-3" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <h5>Redirecting to login...</h5>
+              <p class="text-muted">Please log in to access your dashboard</p>
+            </div>
+          </div>
+        `;
+        
+        // Redirect after showing message
+        setTimeout(() => {
+          window.location.href = 'login.html';
+        }, 2000);
+      }
+    }
+
+    // Check auth after page loads
+    document.addEventListener('DOMContentLoaded', checkAuth);
+    
+    // Logout function
+    function logout() {
+      localStorage.removeItem('isLoggedIn');
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,179 @@
+<!-- Dashboard Sidebar -->
+<div class="sidebar bg-white shadow-sm" style="min-height: 100vh; width: 250px;">
+  <div class="p-4">
+    <!-- User Profile -->
+    <div class="user-profile text-center mb-4 pb-4 border-bottom">
+      <img src="https://ui-avatars.com/api/?name=John+Doe&background=0066cc&color=fff&size=80" 
+           alt="User Avatar" class="rounded-circle mb-2" width="80" height="80">
+      <h6 class="mb-1">John Doe</h6>
+      <small class="text-muted">john.doe@company.com</small>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="sidebar-nav">
+      <ul class="list-unstyled">
+        <li class="mb-2">
+          <a href="dashboard.html" class="sidebar-link active">
+            <i class="fas fa-home icon-left"></i>
+            Dashboard
+          </a>
+        </li>
+        
+        <li class="mb-2">
+          <a href="dashboard.html#services" class="sidebar-link">
+            <i class="fas fa-server icon-left"></i>
+            My Services
+          </a>
+        </li>
+        
+        <li class="mb-2">
+          <a href="dashboard.html#tickets" class="sidebar-link">
+            <i class="fas fa-ticket-alt icon-left"></i>
+            Support Tickets
+          </a>
+        </li>
+        
+        <li class="mb-2">
+          <a href="dashboard.html#invoices" class="sidebar-link">
+            <i class="fas fa-file-invoice icon-left"></i>
+            Invoices
+          </a>
+        </li>
+        
+        <li class="mb-2">
+          <a href="dashboard.html#security" class="sidebar-link">
+            <i class="fas fa-shield-alt icon-left"></i>
+            Security Reports
+          </a>
+        </li>
+        
+        <li class="mb-2">
+          <a href="dashboard.html#settings" class="sidebar-link">
+            <i class="fas fa-cog icon-left"></i>
+            Settings
+          </a>
+        </li>
+        
+        <li class="mb-2">
+          <a href="pages/docs/integration-guide.html" class="sidebar-link">
+            <i class="fas fa-book icon-left"></i>
+            Documentation
+          </a>
+        </li>
+        
+        <li class="mb-2 mt-4 pt-4 border-top">
+          <a href="#" class="sidebar-link text-danger" onclick="logout()">
+            <i class="fas fa-sign-out-alt icon-left"></i>
+            Logout
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<style>
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow-y: auto;
+  }
+
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: var(--dark-color);
+    text-decoration: none;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-fast);
+    font-weight: 500;
+  }
+
+  .sidebar-link:hover {
+    background-color: var(--lighter-gray);
+    color: var(--primary-color);
+  }
+
+  .sidebar-link.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+
+  .sidebar-link.active:hover {
+    background-color: var(--primary-dark);
+    color: var(--white);
+  }
+
+  .sidebar-link i {
+    width: 20px;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 991px) {
+    .sidebar {
+      width: 100%;
+      min-height: auto;
+      position: relative;
+    }
+
+    .sidebar-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .sidebar-nav li {
+      flex: 1 1 auto;
+      margin-bottom: 0 !important;
+    }
+
+    .sidebar-link {
+      font-size: 0.875rem;
+      padding: 0.5rem 0.75rem;
+      justify-content: center;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      text-align: left !important;
+      gap: 1rem;
+      padding-bottom: 1rem !important;
+      margin-bottom: 1rem !important;
+    }
+
+    .user-profile img {
+      width: 50px !important;
+      height: 50px !important;
+      margin-bottom: 0 !important;
+    }
+  }
+</style>
+
+<script>
+  // Logout function
+  function logout() {
+    if (confirm('Are you sure you want to logout?')) {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('userEmail');
+      window.location.href = 'login.html';
+    }
+  }
+
+  // Set active link based on current page
+  document.addEventListener('DOMContentLoaded', () => {
+    const currentPath = window.location.pathname;
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    
+    sidebarLinks.forEach(link => {
+      const linkPath = new URL(link.href).pathname;
+      if (currentPath === linkPath) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+

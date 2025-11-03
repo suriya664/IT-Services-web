@@ -1,0 +1,152 @@
+<!-- Footer -->
+<footer>
+  <div class="container-lg">
+    <div class="row g-4">
+      <!-- Company Info -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <h5>CloudGuard Technologies</h5>
+        <p>Leading IT services provider specializing in cybersecurity, cloud infrastructure, and digital transformation solutions for businesses across India.</p>
+        
+        <div class="social-icons mt-4">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" class="social-icon twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="col-6 col-md-6 col-lg-2">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="./service-details.html?service=cybersecurity">Cybersecurity</a></li>
+          <li><a href="./service-details.html?service=cloud">Cloud Services</a></li>
+          <li><a href="./service-details.html?service=devops">DevOps</a></li>
+          <li><a href="./service-details.html?service=compliance">Compliance</a></li>
+          <li><a href="./service-details.html?service=support">IT Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div class="col-6 col-md-6 col-lg-2">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./case-studies.html">Case Studies</a></li>
+          <li><a href="./careers.html">Careers</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal & Support -->
+      <div class="col-6 col-md-6 col-lg-2">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="./terms.html">Terms of Service</a></li>
+          <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="./docs/integration-guide.html">Documentation</a></li>
+          <li><a href="./contact.html#support">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-12 col-md-6 col-lg-2">
+        <h5>Contact</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <i class="fas fa-map-marker-alt icon-left text-primary"></i>
+            <small>Koramangala, Bengaluru<br>Karnataka 560034</small>
+          </li>
+          <li class="mb-2">
+            <i class="fas fa-phone icon-left text-primary"></i>
+            <small><a href="tel:+919876543210">+91 98765 43210</a></small>
+          </li>
+          <li class="mb-2">
+            <i class="fas fa-envelope icon-left text-primary"></i>
+            <small><a href="mailto:contact@cloudguard.in">contact@cloudguard.in</a></small>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Newsletter Subscription -->
+    <div class="row mt-5">
+      <div class="col-12 col-lg-6 mx-auto">
+        <div class="text-center">
+          <h5>Subscribe to Our Newsletter</h5>
+          <p class="text-muted">Get the latest security updates and tech insights</p>
+          
+          <form class="newsletter-form d-flex gap-2 mt-3">
+            <input type="email" class="form-control" placeholder="Enter your email" 
+                   required aria-label="Email address">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="row">
+        <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 CloudGuard Technologies Pvt. Ltd. All rights reserved.</p>
+        </div>
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <small>Made with <span class="text-danger">❤</span> in India</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Cookie Consent Banner -->
+<div class="cookie-consent position-fixed bottom-0 start-0 end-0 bg-dark text-white p-3 shadow-lg" 
+     style="z-index: 9999; display: none; transition: transform 0.3s ease;">
+  <div class="container-lg">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-8 mb-3 mb-lg-0">
+        <p class="mb-0">
+          <i class="fas fa-cookie-bite me-2"></i>
+          We use cookies to enhance your browsing experience and analyze our traffic. 
+          By clicking "Accept", you consent to our use of cookies. 
+          <a href="./privacy-policy.html" class="text-white text-decoration-underline">Learn more</a>
+        </p>
+      </div>
+      <div class="col-12 col-lg-4 text-lg-end">
+        <button class="btn btn-light cookie-accept">Accept</button>
+        <button class="btn btn-outline-light ms-2" onclick="this.closest('.cookie-consent').style.display='none'">Decline</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cookie-consent.show {
+    display: block !important;
+    animation: slideUp 0.3s ease;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+</style>
+

@@ -1,0 +1,262 @@
+<!-- Modals -->
+
+<!-- Quote Request Modal -->
+<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="quoteModalLabel">Request a Quote</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="quoteForm" class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="quoteName" class="form-label">Full Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="quoteName" name="name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            
+            <div class="col-md-6">
+              <label for="quoteEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="quoteEmail" name="email" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            
+            <div class="col-md-6">
+              <label for="quotePhone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="quotePhone" name="phone" 
+                     placeholder="+91 XXXXX XXXXX" required>
+              <div class="invalid-feedback">Please enter a valid Indian phone number.</div>
+            </div>
+            
+            <div class="col-md-6">
+              <label for="quoteCompany" class="form-label">Company Name</label>
+              <input type="text" class="form-control" id="quoteCompany" name="company">
+            </div>
+            
+            <div class="col-12">
+              <label for="quoteService" class="form-label">Service Interested In <span class="text-danger">*</span></label>
+              <select class="form-select" id="quoteService" name="service" required>
+                <option value="" selected disabled>Select a service</option>
+                <option value="cybersecurity">Managed Security Services</option>
+                <option value="vapt">Vulnerability Assessment & Penetration Testing</option>
+                <option value="cloud">Cloud Migration & Managed Cloud</option>
+                <option value="devops">DevOps & CI/CD Automation</option>
+                <option value="iam">Identity & Access Management</option>
+                <option value="compliance">Compliance & Audit</option>
+                <option value="training">Security Awareness Training</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="invalid-feedback">Please select a service.</div>
+            </div>
+            
+            <div class="col-12">
+              <label for="quoteMessage" class="form-label">Project Details</label>
+              <textarea class="form-control" id="quoteMessage" name="message" 
+                        rows="4" placeholder="Tell us about your requirements..."></textarea>
+            </div>
+            
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="quoteConsent" required>
+                <label class="form-check-label" for="quoteConsent">
+                  I agree to the <a href="terms.html" target="_blank">Terms of Service</a> and 
+                  <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+                </label>
+                <div class="invalid-feedback">You must agree before submitting.</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer mt-3">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal (Quick Contact) -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Quick Contact</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="quickContactForm" class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="contactName" class="form-label">Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="contactName" name="name" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="contactEmail" class="form-label">Email <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="contactEmail" name="email" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="contactMessage" class="form-label">Message <span class="text-danger">*</span></label>
+            <textarea class="form-control" id="contactMessage" name="message" rows="4" required></textarea>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Demo Request Modal -->
+<div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="demoModalLabel">Request a Demo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="demoForm" class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="demoName" class="form-label">Full Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="demoName" name="name" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="demoEmail" class="form-label">Work Email <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="demoEmail" name="email" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="demoPhone" class="form-label">Phone <span class="text-danger">*</span></label>
+            <input type="tel" class="form-control" id="demoPhone" name="phone" 
+                   placeholder="+91 XXXXX XXXXX" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="demoCompany" class="form-label">Company <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="demoCompany" name="company" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="demoDate" class="form-label">Preferred Date</label>
+            <input type="date" class="form-control" id="demoDate" name="date">
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Schedule Demo</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Video Modal (for case studies, demos) -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="videoModalLabel">Video</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="ratio ratio-16x9">
+          <iframe id="videoIframe" src="" title="Video player" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-body p-5">
+        <div class="mb-4">
+          <i class="fas fa-check-circle text-success" style="font-size: 4rem;"></i>
+        </div>
+        <h4 class="mb-3">Thank You!</h4>
+        <p class="text-muted mb-4" id="successMessage">Your request has been submitted successfully. We'll get back to you soon.</p>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login Modal (Quick Login) -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Client Portal Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="quickLoginForm">
+          <div class="mb-3">
+            <label for="quickLoginEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="quickLoginEmail" name="email" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="quickLoginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="quickLoginPassword" name="password" required>
+          </div>
+          
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="rememberMe">
+            <label class="form-check-label" for="rememberMe">Remember me</label>
+          </div>
+          
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+          
+          <div class="text-center mt-3">
+            <a href="#" class="text-muted small">Forgot password?</a>
+          </div>
+          
+          <hr class="my-4">
+          
+          <div class="text-center">
+            <p class="small text-muted">Don't have an account?</p>
+            <a href="contact.html" class="btn btn-outline-primary btn-sm">Contact Sales</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Handle video modal
+  const videoModal = document.getElementById('videoModal');
+  if (videoModal) {
+    videoModal.addEventListener('show.bs.modal', function (event) {
+      const button = event.relatedTarget;
+      const videoUrl = button.getAttribute('data-video-url');
+      const videoTitle = button.getAttribute('data-video-title');
+      
+      const iframe = videoModal.querySelector('#videoIframe');
+      const modalTitle = videoModal.querySelector('.modal-title');
+      
+      if (videoUrl) iframe.src = videoUrl;
+      if (videoTitle) modalTitle.textContent = videoTitle;
+    });
+    
+    // Stop video when modal closes
+    videoModal.addEventListener('hide.bs.modal', function () {
+      const iframe = videoModal.querySelector('#videoIframe');
+      iframe.src = '';
+    });
+  }
+</script>
+
